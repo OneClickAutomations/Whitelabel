@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 35% 7%;
+    --foreground: 0 0% 98%;
+    --card: 230 35% 7%;
+    --card-foreground: 0 0% 98%;
+    --popover: 230 35% 7%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 280 75% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 30% 96%;
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 240 30% 96%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 326 100% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5% 84.9%;
+    --input: 240 5% 84.9%;
+    --ring: 280 75% 60%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500;
+}
+
+.gradient-button {
+  @apply relative overflow-hidden bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-600 hover:from-violet-500 hover:via-fuchsia-500 hover:to-pink-500 text-white transition-all duration-500;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-b from-gray-900/50 to-gray-900/30 backdrop-blur-sm border border-gray-800/50;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
